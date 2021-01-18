@@ -85,7 +85,7 @@ for count, line in enumerate(lines):
         auto.append(PoliceCar(speed, color, name, is_police))
     else:
         continue
-    # show_attr(auto[count])
+
 
 while True:
     for count, line in enumerate(auto):
@@ -102,3 +102,5 @@ while True:
         auto[count].show_speed()
         show_attr(auto[count])
         time.sleep(4)
+
+
