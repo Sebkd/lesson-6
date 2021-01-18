@@ -102,5 +102,3 @@ while True:
         auto[count].show_speed()
         show_attr(auto[count])
         time.sleep(4)
-
-
