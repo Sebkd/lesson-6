@@ -8,12 +8,14 @@ income (доход). Последний атрибут должен быть з�
 проверить значения атрибутов, вызвать методы экземпляров).
 '''
 
+
 class Worker:
     def __init__(self, name, surname, position, income):
         self.name = name
         self.surname = surname
         self.position = position
         self._income = income
+
 
 class Position(Worker):
     def __init__(self, name, surname, position, income):
@@ -23,9 +25,18 @@ class Position(Worker):
         return str(self.surname + ' ' + self.name)
 
     def get_total_income(self):
-        return (self._income.get('wage') + self._income.get('bonus'))
+        return (int(self._income.get('wage')) + int(self._income.get('bonus')))
 
-docker = Position(f'{input("Введите имя: ")}', f'{input("Введите фамилию: ")}', f'{input("Введите должность: ")}',
-                  {'wage': f'{input("Введите оклад: ")}', 'bonus' : f'{input("Введите премию: ")}'})
-print(f'Full name worker - {docker.get_full_name()}')
-print(f'His total income: {docker.get_total_income()}')
+
+docker = [Position(f'{input("Введите имя: ")}', f'{input("Введите фамилию: ")}',
+                             f'{input("Введите должность: ")}',
+                             {'wage': f'{input("Введите оклад: ")}', 'bonus': f'{input("Введите премию: ")}'})
+                     for count in range(1)]
+
+for count in range(len(docker)):
+    print(f"getattr(docker[count], 'name'): {getattr(docker[count], 'name')}\n",
+          f"getattr(docker[count], 'surname'): {getattr(docker[count], 'surname')}\n",
+          f"getattr(docker[count], 'position'): {getattr(docker[count], 'position')}\n",
+          f"hasattr(docker[count], 'income'):{hasattr(docker[count], 'income')}\n")
+    print(f'Полное имя работника - {docker[count].get_full_name()}')
+    print(f'Его зарплата: {docker[count].get_total_income()}')
