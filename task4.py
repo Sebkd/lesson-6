@@ -26,22 +26,22 @@ class Car:
         return print(f' Скорость автомобиля {self.speed}')
 
     def go(self):
-        return print('Автомобиль поехал')
+        return print(' Автомобиль двигается прямо')
 
     def stop(self):
-        return print('Автомобиль остановился')
+        return print(' Автомобиль остановился')
 
     def turn(self, direction):
-        return print(f'Автомобиль повернул {direction}')
+        return print(f' Автомобиль повернул {direction}')
 
 
 class TownCar(Car):
     '''Обычный легковой городской автомобиль'''
     def show_speed(self):
         if int(self.speed) > 60:
-            return 'Внимание! Скорость автомоибля превышена, должно быть менее 60'
+            return print(' Внимание! Скорость автомоибля превышена, должно быть менее 60')
         else:
-            return print(f'Скорость автомобиля {self.speed}')
+            return print(f' Скорость автомобиля {self.speed}')
 
 
 class SportCar(Car):
@@ -52,9 +52,9 @@ class WorkCar(Car):
     '''Грузовой автомобиль'''
     def show_speed(self):
         if int(self.speed) > 40:
-            return 'Внимание! Скорость автомоибля превышена, должно быть менее 40'
+            return print(' Внимание! Скорость автомоибля превышена, должно быть менее 40')
         else:
-            return print(f'Скорость автомобиля {self.speed}')
+            return print(f' Скорость автомобиля {self.speed}')
 
 
 class PoliceCar(Car):
@@ -93,8 +93,9 @@ while True:
         if random_move == 1:
             setattr(auto[count], 'speed', 0)
             auto[count].stop()
-        elif random_move == 2:
+        else:
             setattr(auto[count], 'speed', random.randint(5, 90))
+        if random_move == 2:
             auto[count].go()
         elif random_move == 3:
             auto[count].turn('налево' if random.randint(1, 2) == 1 else 'направо')
