@@ -31,10 +31,13 @@ class Handle(Stationery):
     def draw(self):
         print(f'Порисуем на {self.title} маркером')
 
+
 contract = Pen('договор')
 diagramm = Pencil('диаграмма')
 drawing = Handle('холст')
+any_title = Stationery('бумажка')
 
 contract.draw()
 diagramm.draw()
 drawing.draw()
+any_title.draw()
