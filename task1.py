@@ -7,3 +7,23 @@
 Переключение между режимами должно осуществляться только в указанном порядке (красный, желтый, зеленый).
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 '''
+import time
+
+
+class TrafficLight:
+    def __init__(self):
+        self.__color = ['red', 'yellow', 'green']
+
+
+    def running(self):
+        for bless in self.__color:
+            print(bless)
+            if bless == 'red':
+                time.sleep(7)
+            elif bless == 'yellow':
+                time.sleep (2)
+            else:
+                time.sleep(7)
+
+traffic = TrafficLight()
+traffic.running()
