@@ -1,0 +1,7 @@
+town_car 65 черная-тонированная Лада_Приора False
+town_car 55 серая Лада_Веста False
+town_car 57 белый ЛандКруизерПрадо False
+sport_car 99 красный Поло_спорт False
+work_car 37 серый Изузу False
+work_car 22 оранжевый КамаЗ False
+police_car 78 белый Тойота_Камри True
