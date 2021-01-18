@@ -29,9 +29,9 @@ class Position(Worker):
 
 
 docker = [Position(f'{input("Введите имя: ")}', f'{input("Введите фамилию: ")}',
-                             f'{input("Введите должность: ")}',
-                             {'wage': f'{input("Введите оклад: ")}', 'bonus': f'{input("Введите премию: ")}'})
-                     for count in range(1)]
+                   f'{input("Введите должность: ")}',
+                   {'wage': f'{input("Введите оклад: ")}', 'bonus': f'{input("Введите премию: ")}'})
+          for count in range(1)]
 
 for count in range(len(docker)):
     print(f"getattr(docker[count], 'name'): {getattr(docker[count], 'name')}\n",
