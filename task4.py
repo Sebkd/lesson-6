@@ -46,6 +46,7 @@ class TownCar(Car):
 
 class SportCar(Car):
     '''Гоночный автомобиль'''
+    pass
 
 
 class WorkCar(Car):
@@ -59,6 +60,7 @@ class WorkCar(Car):
 
 class PoliceCar(Car):
     '''Полицейский автомобиль'''
+    pass
 
 
 def show_attr(auto_obj):
